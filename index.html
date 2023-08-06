@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cor Blimey</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    
+    <div class="signin-btn-container">
+      <button id="sign-out" onclick="handleSignoutClick()">Sign Out</button>
+      <button id="sign-in" onclick = "handleAuthClick()">Sign In</button>
+    </div>
+
+    <div class="split left">
+      <h1>Options</h1>
+      <div class="dropdown">
+        <button id="option" class="dropbtn">Select an option</button>
+        <div class="dropdown-content">
+          <a href="#">Categorize by sender </a>
+          <a href="#">Categorize by keyword</a>
+          <a href="#">Categorize by subject</a>
+        </div>
+      </div>
+      <ul class="side-options">
+        <li data-label="Home"></li>
+        <li data-label="Info"></li>
+        <li data-label="Repo Link"></li>
+        <li data-label="Buy me a coffee"></li>
+      </ul>
+    </div>
+
+    <div class="split right">
+      <h1>Hello</h1>
+      <p>White half.</p>
+      <div class="input-container">
+        <input type="text" id="labelName" placeholder="Enter label name..." />
+        <input
+          type="text"
+          id="criteriaInput"
+          placeholder="Enter sender/keyword/subject..."
+        />
+        <button id="submitButton" onclick="categorize()">Submit</button>
+      </div>
+    </div>
+    
+    <div class="info-container">
+    <button class="info-button">Info</button>
+    <div class="info-text">
+        Use this tool to categorize your mails effectively.<br>
+        Sign in using your Google account and choose one of the options.<br>
+        Provide a label name and the query to search for (sender name or keywords).<br>
+    </div>
+</div>
+    
+    <script src = "script1.js"></script>
+    <script src = "script.js"></script>
+    
+    <script
+      async
+      defer
+      src="https://apis.google.com/js/api.js"
+      onload="gapiLoaded()"
+    ></script>
+    <script
+      async
+      defer
+      src="https://accounts.google.com/gsi/client"
+      onload="gisLoaded()"
+    ></script>
+
+  </body>
+</html>
