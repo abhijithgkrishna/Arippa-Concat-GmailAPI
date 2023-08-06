@@ -19,6 +19,6 @@ Authentication was done using Google OAuth.
 
 # How to configure and run
 
-> Clone the repo
-> Provide the API key and CLIENT ID in script.js file
-> Run index.html
+- Clone the repo
+- Provide the API key and CLIENT ID in script.js file
+- Run index.html
