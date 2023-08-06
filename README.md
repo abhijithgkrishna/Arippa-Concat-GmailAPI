@@ -8,7 +8,7 @@ Tool to easily categorize mails
 
 # Team Name - Arippa
 
-# Link to Video -
+# Link to Video - https://www.loom.com/share/d6d138c134634120bf62e73cf45bf7b4?sid=d4ffc1fb-a034-4051-8bfc-3523fbc5836e
 
 # How the tool works
 
