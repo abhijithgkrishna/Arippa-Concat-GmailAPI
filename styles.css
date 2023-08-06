@@ -1,0 +1,300 @@
+body, h1, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;  /* Monospace font */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;  /* Increased padding for moving logo and buttons */
+}
+
+#logo {
+    max-width: 150px;
+    margin-left: -5%;  /* Move the logo further to the left */
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: #000000;  /* Black text color */
+}
+.signin-btn-container {
+    z-index: 10;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+#sign-in {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #b2ffa9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #b2ffa9;  /* Updated color for visibility */
+    color: #000000;  /* Black text for contrast */
+}
+
+#sign-in:hover {
+    background-color: #89e57f;  /* Slightly darker shade on hover */
+}
+
+#sign-out {
+    display:none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #b2ffa9;  /* Green accent border */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    background-color: #ffffff;  /* White background */
+    color: #000000;  /* Black text for contrast */
+    margin-right: 10px;  /* Spacing between the two buttons */
+}
+
+#sign-out:hover {
+    background-color: #e6e6e6;  /* Slightly darker shade on hover */
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+.split {
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.left {
+    left: 0;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;  /* Added spacing between elements */
+}
+
+.right {
+    right: 0;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #333333;
+    color: #b2ffa9;  /* Updated color */
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #555555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    overflow: auto;
+    border: 1px solid #333333;
+    z-index: 1;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%; /* Adjust as needed */
+    margin-top: 20px;
+}
+
+#userInput {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #b2ffa9; /* Border color matching the design */
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+}
+
+#userInput:focus {
+    border-color: #89e57f; /* Slightly darker shade for focus */
+}
+
+#submitButton {
+    padding: 12px 20px;  /* Increased padding for a larger button */
+    background-color: #b2ffa9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;  /* Adjusted font size */
+    transition: background-color 0.3s;
+    color: #000000;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;  /* Center the button */
+    display: block;  /* Make the button a block element to accept margin auto */
+}
+
+#submitButton:hover {
+    background-color: #89e57f; /* Slightly darker shade on hover */
+}
+input[type="text"] {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #b2ffa9; /* Border color matching the design */
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    width: 100%; /* Ensuring full width within the container */
+}
+
+input[type="text"]:focus {
+    border-color: #89e57f; /* Slightly darker shade for focus */
+}
+
+.side-options {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;  /* Adjusting to the leftmost end */
+    transform: translateY(-50%);
+}
+
+.side-options li {
+    width: 20px;  /* Size for the dash */
+    height: 3px;  /* Height for the dash */
+    background-color: #ffffff;  /* White color for the dash */
+    margin-bottom: 40px;  /* Increased spacing between dashes */
+    position: relative;
+    cursor: pointer;
+    transition: width 0.3s;
+}
+
+.side-options li:hover {
+    width: 120px;  /* Width on hover to reveal the full text */
+}
+
+.side-options li::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 30px;  /* Spacing for the label from the dash */
+    bottom: 5px;  /* Positioning the text to appear on top of the dash */
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+    color: #ffffff;  /* Text color to white */
+    font-size: 18px;  /* Increased font size */
+}
+
+.side-options li:hover::before {
+    opacity: 1;
+}
+
+#loading-bar {
+    position: fixed;
+    top: 0;
+    left: 100%; /* Initially hidden off the right side of the screen */
+    height: 4px;
+    width: 100%;
+    background-color: #b2ffa9; /* Green accent color */
+    z-index: 1000; /* Ensure it's above other elements */
+    transition: left 0.5s ease-out; /* Smooth transition */
+}
+
+.info-container {
+  width:400px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.info-button {
+    background-color: #b2ffa9; /* Green accent color */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.info-button:hover {
+    background-color: #89e57f; /* Slightly darker shade on hover */
+}
+
+.info-text {
+    display: none;
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 800px; /* Further increased width */
+    position: absolute;
+    bottom: 40px; /* Position above the button */
+    left: 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for better visibility */
+}
+
+.info-container:hover .info-text {
+    display: block;
+}
