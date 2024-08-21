@@ -120,10 +120,7 @@ document.getElementById('sign-in-button').addEventListener('click', function() {
     // Call your function here
     categorize();
 
-    // Hide the loader after 2 seconds
-    setTimeout(function() {
-        document.getElementById('loading-bar').style.left = '100%';
-    }, 2000);
+    
 });
 
 async function createLabel(labelName){
